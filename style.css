@@ -60,7 +60,7 @@ button {
     font-size: 1.1rem;
     font-family: Arial, Helvetica, sans-serif;
     padding:1.3rem ;
-    transition:transform 2.0sec ease; /* fix later */
+    transition:transform 2.0sec ease;
 }
 
 button:hover {
