@@ -60,6 +60,8 @@ function pad(val) {
   }
 }
 
+const results = []
+
 let currentQuestion = 0;
 let score = 0;
 
@@ -130,7 +132,14 @@ function monkey() {
 
     function displayFinalScore() {
         const finalScoreContainer = document.getElementById('final-score');
-        finalScoreContainer.innerHTML = `Quiz completed. Your final score: ${score}`;
+        const userName = prompt('Quiz completed. Enter your name:');
+        
+        if (userName) {
+            finalScoreContainer.innerHTML = `Hi ${userName}! Your final score is: ${score}`;
+            results.push({ name: userName, score: score});
+        } else {
+            finalScoreContainer.innerHTML = 'Your final score is: ${score}';
+        }
     }
     
     loadQuestion();
