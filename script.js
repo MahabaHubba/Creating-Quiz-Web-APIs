@@ -101,6 +101,7 @@ function monkey() {
 
         if (answer === quizData[currentQuestion].correct) {
             score++;
+            totalSeconds += 10;
         } else {
             totalSeconds = totalSeconds - 10
         }
